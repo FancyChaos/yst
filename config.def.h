@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Fira Code Nerd Font:pixelsize=28:antialias=true:style=Medium";
 static int borderpx = 2;
 
 /*
@@ -98,35 +98,33 @@ float alpha = 0.7;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+        /* 8 normal colors */
+        "#393b44",
+        "#c94f6d",
+        "#97c374",
+        "#dbc074",
+        "#96CDFB",
+        "#c678dd",
+        "#61afef",
+        "#dfdfe0",
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+        /* 8 bright colors */
+        "#7f8c98",
+        "#e06c75",
+        "#58cd8b",
+        "#FFE37E",
+        "#96CDFB",
+        "#B8A1E3",
+        "#84CEE4",
+        "#FDEBC3",
 
-	[255] = 0,
+        [255] = 0,
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+        [256] = "#abb2bf", /* default foreground colour */
+        [257] = "#000000", /* default background colour */
+        [258] = "#C3BAC6", /*575268*/
+
 };
-
 
 /*
  * Default colors (colorname index)
@@ -250,6 +248,9 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
 	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
+        { ControlMask,          XK_plus,       zoom,            {.f = +1} },
+        { ControlMask,          XK_equal,       zoom,            {.f = +1} },
+        { ControlMask,          XK_minus,       zoom,           {.f = -1} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
