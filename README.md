@@ -1,6 +1,6 @@
 # yst - st patched
 
-**yst** is a version of st with some suckless patches already applied to it.
+**yst** is a version of [st](https://st.suckless.org/) with some suckless patches already applied to it.
 
 The compiled executable will still be named **st**.
 
@@ -31,6 +31,8 @@ I use them for my automated install scripts.
 Rename that file to *config.mk* to compile for OpenBSD.
 
 *Fire Code Nerd Font* is required (Or just change the font yourself).
+
+------------
 
 ## Original README
 
